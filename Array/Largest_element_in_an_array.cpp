@@ -24,7 +24,7 @@ int main(){
 /*Recursive Approach: Declare and update a max variable while looping
 
 Time Complexity: O(n)
-Space Complexity: O(1)*/
+Space Complexity: O(1
 
 int findLargestElement(int arr[], int n){
     int max=arr[0];
@@ -42,4 +42,4 @@ int main(){
     cout<<"Largest element is "<<max<<endl;
 }
 
-
+*/
