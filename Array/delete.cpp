@@ -2,6 +2,12 @@
 #include <cmath>
 using namespace std;
 
+/*
+cd "C:\Users\Prafull\Desktop\Code Playground\DSA\Array"
+g++ delete.cpp -o delete
+.\delete.exe
+*/
+
 // Function to delete an element x from an array arr[] of size n
 int deleteEle(int arr[], int n, int x)
 {
