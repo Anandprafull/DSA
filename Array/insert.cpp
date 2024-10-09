@@ -2,49 +2,63 @@
 #include <cmath>
 using namespace std;
 
+// Function to insert an element x in arr[] of size n at position pos
 int insert(int arr[], int n, int x, int cap, int pos)
 {
-	if(n == cap)
-		return n;
+    // If the array is already full, return n
+    if(n == cap)
+        return n;
 
-	int idx = pos - 1;
+    // Calculate the index where the element needs to be inserted
+    int idx = pos - 1;
 
-	for(int i = n - 1; i >= idx; i--)
-	{
-		arr[i + 1] = arr[i];
-	}
+    // Shift elements to the right to make space for the new element
+    for(int i = n - 1; i >= idx; i--)
+    {
+        arr[i + 1] = arr[i];
+    }
 
-	arr[idx] = x;
+    // Insert the new element at the calculated index
+    arr[idx] = x;
 
-	return n + 1;
+    // Return the new size of the array
+    return n + 1;
 } 
 
-
-    
 int main() {
-	
-       int arr[5], cap = 5, n = 3;
+    // Initialize an array with capacity 5 and current size 3
+    int arr[5], cap = 5, n = 3;
 
-       arr[0] = 5; arr[1] = 10; arr[2] = 20;
+    // Assign initial values to the array
+    arr[0] = 5; arr[1] = 10; arr[2] = 20;
 
-       cout<<"Before Insertion"<<endl;
+    // Print the array before insertion
+    cout << "Before Insertion" << endl;
+    for(int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
-       for(int i=0; i < n; i++)
-       {
-       	cout<<arr[i]<<" ";
-       }
+    // Element to be inserted and its position
+    int x = 7, pos = 2;
 
-       cout<<endl;
+    // Insert the element and update the size of the array
+    n = insert(arr, n, x, cap, pos);
 
-       int x = 7, pos = 2;
-
-       n = insert(arr, n, x, cap, pos);
-
-       cout<<"After Insertion"<<endl;
-
-       for(int i=0; i < n; i++)
-       {
-       		cout<<arr[i]<<" ";
-       }
-    
+    // Print the array after insertion
+    cout << "After Insertion" << endl;
+    for(int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
 }
+//output 
+/*
+Before Insertion
+5 10 20 
+After Insertion
+5 7 10 20 
+*/
+
+
