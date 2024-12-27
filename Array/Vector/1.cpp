@@ -40,3 +40,9 @@ int main()
 
     return 0; 
 }
+/*Size : 5
+Vector is not empty
+Output of begin and end: 1 2 3 4 5 
+The first element is: 5
+The last element is: 20
+Vector size after erase(): 0*/
